@@ -10,11 +10,7 @@
 
     <h1>A MULTI-CULTUR GIF</h1>
 
-    <div class="button-container">
-        <button class="bigButton1" id="btn1">2'd Wiew( Click 2 times)</button>
-        <button class="bigButton2" id="btn2">2'N Wiew OFF</button>
-        <button class="bigButton3" id="btn3">IT END LIKE THIS</button>
-    </div>
+<br<br>
 
     <marquee behavior="scroll" direction="down">
         <h3>Help mee with the braw, please</h3>
@@ -44,6 +40,19 @@
     </marquee> 
 
     <h5><em>by Joe Doe !</em></h5>
-    <script src="app.js"></script>
+    <script>
+        
+const namespace = 'mine_bilder';
+const key = 'cats';
+fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+  .then(res => res.json())
+  .then(data => document.getElementById('visits').textContent = data.value)
+  .catch(()=> document.getElementById('visits').textContent = '—');
+</script>
+
+    <footer style="position:fixed; left:10px; bottom:10px;">
+  Besøk: <span id="visits">…</span>
+    </footer>
+    
 </body>
 </html>
