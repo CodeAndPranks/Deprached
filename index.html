@@ -40,6 +40,11 @@
     </marquee> 
 
     <h5><em>by Joe Doe !</em></h5>
+    
+    <footer style="position:fixed; left:10px; bottom:10px;">
+  Besøk: <span id="visits">…</span>
+    </footer>
+    
     <script>
         
 const namespace = 'mine_bilder';
@@ -49,10 +54,6 @@ fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
   .then(data => document.getElementById('visits').textContent = data.value)
   .catch(()=> document.getElementById('visits').textContent = '—');
 </script>
-
-    <footer style="position:fixed; left:10px; bottom:10px;">
-  Besøk: <span id="visits">…</span>
-    </footer>
     
 </body>
 </html>
