@@ -41,19 +41,21 @@
 
     <h5><em>by Joe Doe !</em></h5>
     
+    
     <footer style="position:fixed; left:10px; bottom:10px;">
   Besøk: <span id="visits">…</span>
-    </footer>
-    
-    <script>
-        
+</footer>
+
+<script>
 const namespace = 'mine_bilder';
-const key = 'cats';
-fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+const key = 'start';
+fetch(`https://countapi.org/hit/${namespace}/${key}`)
   .then(res => res.json())
-  .then(data => document.getElementById('visits').textContent = data.value)
+  .then(data => { document.getElementById('visits').textContent = data.value; })
   .catch(()=> document.getElementById('visits').textContent = '—');
 </script>
+
+
     
 </body>
 </html>
