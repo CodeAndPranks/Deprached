@@ -1,12 +1,15 @@
-addEventListeners(btn1, myFunction1);
-addEventListeners(btn2, myFunction2);
-addEventListeners(btn3, myFunction3);
+document.addEventListener("DOMContentLoaded", function() {
+    const btn = document.getElementById("button");
+    addEventListeners(btn, myFunction1);
+});
 
 function addEventListeners(button, func) {
     button.addEventListener("click", func);
     button.addEventListener("touchstart", func);
 }
 
+function myFunction1() {
+                          
 //twist angel of tag('s) ,e.g img tag OR all tag-name with *
 function myFunction1 () {  
 (function(){var x = document.body.getElementsByTagName("*"); 
