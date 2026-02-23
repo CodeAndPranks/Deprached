@@ -16,7 +16,6 @@ function addEventListeners(button, func) {
 
 //twist angel of tag('s) ,e.g img tag OR all tag-name with *
 function myFunction1 () {  
-    alert("Testing")
 (function(){var x = document.body.getElementsByTagName("*"); 
 for (i = 0; i < x.length; i++) {
 var y = Math.floor((Math.random()*10)+1); x[i].style.transform="rotate("+y+"deg)"}}());
@@ -36,6 +35,7 @@ let y1 = 1, y2 = 2, y3 = 3, y4 = 100, y5 = 150;
 
 // Function called on button3 click
 function myFunction3() {
+    alert("hello world")
     // Get all elements (images or others)
     let DI = document.getElementsByTagName("*");//Expriment with ,h1,h2,img,*. 
     let DIL = DI.length;
