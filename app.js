@@ -33,31 +33,27 @@ let R = 0;
 let x1 = 1, x2 = 2, x3 = 3, x4 = 100, x5 = 150;
 let y1 = 1, y2 = 2, y3 = 3, y4 = 100, y5 = 150;
 
-// Function called on button3 click
+// Function called on button3 click.
 function myFunction3() {
-    alert("hello world")
-    // Get all elements (images or others)
-    let DI = document.getElementsByTagName("*");//Expriment with ,h1,h2,img,*. 
-    let DIL = DI.length;
+    const funnySites = [
+        "https://www.theuselessweb.com/",
+        "https://www.randomfunfacts.com/",
+        "https://shibe.online/",
+        "https://www.cat-bounce.com/",
+        "https://www.poodwaddle.com/"
+    ];
 
-    //animate the elements
-    function A() {
-        for (let i = 0; i < DIL; i++) { 
-            let DIS = DI[i].style; 
-            DIS.position = 'absolute'; 
-            DIS.left = (Math.sin(R * x1 + i * x2 + x3) * x4 + x5) + "px"; 
-            DIS.top = (Math.cos(R * y1 + i * y2 + y3) * y4 + y5) + "px";
+    let index = 0;
+
+    // Function to open the links one by one
+    function openNextLink() {
+        if (index < funnySites.length) {
+            window.open(funnySites[index], "_blank"); 
+            index++; // Move to the next URL
+            setTimeout(openNextLink, 2000);
         }
-        R++;
     }
 
-    // Start the animation with a 200 ms interval//Try differens speed
-    let intervalID = setInterval(A, 200); 
-
-    // Stop the animation after 5 seconds
-    setTimeout(function() {
-        clearInterval(intervalID); // Stop animation,
-        location.reload();         // reload page(= back to start)
-    }, 5000);                      //rotate 5 secound.
-} 
-
+    alert("Hold on tight! Fact isn't any fun...");
+    openNextLink(); 
+}
