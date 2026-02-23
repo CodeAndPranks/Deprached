@@ -1,6 +1,4 @@
-
-            
-                 body {
+ body {
             background-color: red;
             margin: 0;
             display: flex;
@@ -12,34 +10,6 @@
     max-width: 800px; /* Limit width of content */
     overflow: hidden;
 }
-
-.button-container {
-    display: flex; 
-    justify-content: 
-    margin: 20px 0; /* Margin above & below  button container */
-    gap: 20px; 
-}
-
-.bigButton1 {
-width: 200px;
-height: 50px;
-background-color:blue;
-color:white;
-
-}
-.bigButton2 {
-width: 200px;
-height: 50px;
-background-color:yellow;
-color:black;
-}
-.bigButton3 {
-width: 200px;
-height: 50px;
-background-color:green;
-color: yellow
-}
-
 
 h1 {
  color:blue; 
