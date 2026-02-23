@@ -7,8 +7,6 @@ function addEventListeners(button, func) {
     button.addEventListener("click", func);
     button.addEventListener("touchstart", func);
 }
-
-function myFunction1() {
                           
 //twist angel of tag('s) ,e.g img tag OR all tag-name with *
 function myFunction1 () {  
